@@ -8,10 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MemberController {
 
-    @GetMapping("/members/{id}")
+    @GetMapping("/member/{id}")
     public Member getMember(@PathVariable Long id) {
         Member member = new Member();
         member.setId(id);
+        member.setName("테스트 ID = " +id);
         return member;
     }
 
