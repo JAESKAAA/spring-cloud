@@ -30,6 +30,12 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+    //config-server의 클라이언트로 사용하기 위한 의존성
+    implementation 'org.springframework.cloud:spring-cloud-starter-config'
+    //config의 무중단 refresh를 위한 액추에이터
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+
 }
 
 dependencyManagement {

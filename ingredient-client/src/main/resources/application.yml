@@ -3,3 +3,12 @@ server:
 spring:
   application:
     name: ingredient-client
+  config:
+    import: "optional:configserver:http://localhost:8889"
+    activate:
+      on-profile: local
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans, busrefresh
